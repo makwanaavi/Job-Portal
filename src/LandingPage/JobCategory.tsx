@@ -8,15 +8,14 @@ const JobCategory = () => {
       <div className="text-4xl font-semibold mb-4 text-mine-shaft-100 text-center">
         Browes <span className="text-bright-sun-400">Job</span> Category
       </div>
-      <div className="text-mine-shaft-200 text-center w-1/2 mx-auto">
-        Explore diverse job opportunities tailored to your skills. <br />
-        Start your career journey today.
+      <div className="text-mine-shaft-200 text-center w-1/2 mx-auto text-lg mb-10   ">
+        Explore diverse job opportunities tailored to your skills. 
+        Start your career  journey today.
       </div>
 
       <Carousel
         slideSize="22%"
-        slideGap="md"
-        height={180}
+        slideGap="xs"
         nextControlIcon={
           <IconArrowRight className="bg-bright-sun-400 rounded-full h-8 w-8 border border-bright-sun-400" />
         }
@@ -177,7 +176,7 @@ const JobCategory = () => {
             <div className="text-mine-shaft-100 text-xl font-semibold">
               Human Resource
             </div>
-            <div className="text-mine-shaft-300 text-sm text-center px-2">
+            <div className="text-mine-shaft-300 text-sm text-center px-1">
               Recruit, manage, and support company employees
             </div>
             <div className="text-bright-sun-300 font-medium text-sm">
