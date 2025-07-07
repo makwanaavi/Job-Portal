@@ -12,3 +12,8 @@ export const companies = [
   "Spotify",
   "Walmart",
 ];
+
+
+export const JobCategory = [
+    
+]

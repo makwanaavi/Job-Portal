@@ -19,9 +19,7 @@ const Companies = () => {
             />
           </div>
         ))}
-        {/* <div>
-            <img src="/" alt="" />
-        </div> */}
+       
       </Marquee>
     </div>
   );
