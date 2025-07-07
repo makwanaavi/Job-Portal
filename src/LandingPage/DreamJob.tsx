@@ -46,7 +46,7 @@ const DreamJob = () => {
             </Avatar.Group>
           </div>
 
-          <div className="absolute -left-14 top-[30%] w-fit mb-1 border border-bright-sun-400 rounded-lg p-4 backdrop-blur-md gap-3 flex flex-col justify-around">
+          <div className="absolute -left-6 top-[30%] w-fit mb-1 border border-bright-sun-400 rounded-lg p-4 backdrop-blur-md gap-3 flex flex-col justify-around">
             <div className="flex gap-2 items-center">
               <div className="w-12 h-12 p-1 bg-bright-sun-200/10 rounded-lg">
                 <img src="/Google.png" alt="" />
