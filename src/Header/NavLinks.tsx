@@ -13,14 +13,15 @@ const NavLinks = () => {
   const location = useLocation();
 
   return (
-    <div className="flex gap-12 h-full items-center text-mine-shaft-200">
+    <div className="flex gap-12 h-full items-center text-white">
       {Links.map((link, index) => (
         <div
           key={index}
-          className={`${
+          className={`active:scale-125 transition-all ${
+    
             location.pathname === "/" + link.url
               ? "border-bright-sun-400 text-bright-sun-400"
-              : "text-mine-shaft-200 border-transparent"
+              : "text-white border-transparent"
           } border-t-[3px] h-full flex items-center`}
         >
           <Link to={`/${link.url}`}>{link.name}</Link>
