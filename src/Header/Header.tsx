@@ -1,7 +1,8 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { IconAnchor, IconBell, IconSettings } from "@tabler/icons-react";
-import { Avatar } from "@mantine/core";
+import { Avatar, Indicator } from "@mantine/core";
 
 const Header = () => {
   return (
@@ -24,17 +25,21 @@ const Header = () => {
           About Us
         </a>
       </div>
-      <div className="flex gap-6 items-center">
-        <div className="flex items-center gap-2">
+      <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-1">
           <Avatar src="avatar.png" alt="it's me" className="cursor-pointer" />
           <div className="hover:text-bright-sun-400 cursor-pointer">
             Avi Makwana
           </div>
         </div>
-        <div className="border rounded-full p-2 border-dashed cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
-          <IconBell stroke={1.5} className="hover:stroke={2}" />
+
+        <div className="bg-mine-shaft-900 p-2 rounded-full">
+          <Indicator color="brightSun.4"     size={9} offset={2} processing>
+            <IconBell stroke={1.5} />
+          </Indicator>
         </div>
-        <div className="border rounded-full p-2 border-dashed cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
+
+        <div className="bg-mine-shaft-900 p-2 rounded-full">
           <IconSettings stroke={1.5} />
         </div>
       </div>
@@ -43,3 +48,22 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* <div className="p-2 flex items-center justify-center border border-dashed rounded-full cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
+          <Indicator
+            inline
+            processing
+            color="yellow"
+            size={9}
+            offset={2}
+          >
+            <IconBell stroke={1.5} />
+          </Indicator>
+        </div> */
+}
+{
+  /* <div className="border rounded-full p-2 border-dashed cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
+          <IconSettings stroke={1.5} />
+        </div> */
+}
