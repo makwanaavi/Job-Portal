@@ -1,5 +1,6 @@
 /* eslint-disable no-lone-blocks */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from "react";
 import { IconAnchor, IconBell, IconSettings } from "@tabler/icons-react";
 import { Avatar, Indicator } from "@mantine/core";
@@ -12,18 +13,18 @@ const Header = () => {
         <IconAnchor className="h-8 w-8 " stroke={2.5} />
         <div className="text-3xl font-semibold ">JobHook</div>
       </div>
-     {/* <NavLinks/> */}
-     {NavLinks()}
+      <NavLinks/>
+      {/* {NavLinks()} */}
       <div className="flex gap-3 items-center">
         <div className="flex items-center gap-1 active:scale-125 transition-all">
-          <Avatar src="avatar.png" alt="it's me" className="cursor-pointer" />
+          <Avatar src="/avatar.png" alt="it's me" className="cursor-pointer" />
           <div className="hover:text-bright-sun-400 cursor-pointer">
             Avi Makwana
           </div>
         </div>
 
         <div className="bg-mine-shaft-900 p-2 rounded-full cursor-pointer active:scale-125 transition-all">
-          <Indicator color="brightSun.4"     size={9} offset={2} processing>
+          <Indicator color="brightSun.4" size={9} offset={2} processing>
             <IconBell stroke={1.5} />
           </Indicator>
         </div>

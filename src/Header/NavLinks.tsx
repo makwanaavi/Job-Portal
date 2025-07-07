@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const NavLinks = () => {
   const Links = [
     { name: "Find Jobs", url: "find-jobs" },
@@ -10,13 +10,20 @@ const NavLinks = () => {
     { name: "Upload Jobs", url: "upload-jobs" },
     { name: "About Us", url: "about-us" },
   ];
+  const location = useLocation();
+
   return (
-    <div className="flex gap-12">
+    <div className="flex gap-12 h-full items-center text-mine-shaft-200">
       {Links.map((link, index) => (
-        <div>
-          <Link key={index} to={link.url}>
-            {link.name}
-          </Link>
+        <div
+          key={index}
+          className={`${
+            location.pathname === "/" + link.url
+              ? "border-bright-sun-400 text-bright-sun-400"
+              : "text-mine-shaft-200 border-transparent"
+          } border-t-[3px] h-full flex items-center`}
+        >
+          <Link to={`/${link.url}`}>{link.name}</Link>
         </div>
       ))}
     </div>
