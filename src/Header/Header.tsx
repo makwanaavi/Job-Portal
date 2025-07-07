@@ -1,36 +1,42 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import {
-  IconBell,
-  IconBriefcaseFilled,
-  IconSettings,
-} from "@tabler/icons-react";
+import { IconAnchor, IconBell, IconSettings } from "@tabler/icons-react";
 import { Avatar } from "@mantine/core";
 
 const Header = () => {
   return (
-    <header className="w-full bg-mine-shaft-950 h-28 text-white flex justify-between items-center px-6">
-      <div className="flex justify-center items-center gap-3">
-        <IconBriefcaseFilled
-          className="h-10 w-10 text-white"
-          fill="currentColor"
-          stroke={1.5}
-        />
-        <div className="text-3xl font-semibold text-white">iJOB</div>
+    <header className="w-full bg-mine-shaft-950/80 h-24 text-white flex justify-between items-center px-6">
+      <div className="flex justify-center items-center gap-1 text-bright-sun-400 cursor-pointer">
+        <IconAnchor className="h-8 w-8 " stroke={2.5} />
+        <div className="text-3xl font-semibold">JobHook</div>
       </div>
-      <div className="flex gap-8 mr-24">
-        <a href="#">Find Job</a>
-        <a href="#">Find Talent</a>
-        <a href="#">Upload Jobs</a>
-        <a href="#">About Us</a>
+      <div className="flex gap-5 mr-24">
+        <a href="#" className="hover:text-bright-sun-400">
+          Find Job
+        </a>
+        <a href="#" className="hover:text-bright-sun-400">
+          Find Talent
+        </a>
+        <a href="#" className="hover:text-bright-sun-400">
+          Upload Jobs
+        </a>
+        <a href="#" className="hover:text-bright-sun-400">
+          About Us
+        </a>
       </div>
       <div className="flex gap-6 items-center">
-        <IconBell />
         <div className="flex items-center gap-2">
-          <Avatar src="avatar.png" alt="it's me" />
-          <div>Avi Makwana</div>
+          <Avatar src="avatar.png" alt="it's me" className="cursor-pointer" />
+          <div className="hover:text-bright-sun-400 cursor-pointer">
+            Avi Makwana
+          </div>
         </div>
-        <IconSettings />
+        <div className="border rounded-full p-2 border-dashed cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
+          <IconBell stroke={1.5} className="hover:stroke={2}" />
+        </div>
+        <div className="border rounded-full p-2 border-dashed cursor-pointer hover:border-bright-sun-400 hover:text-bright-sun-400">
+          <IconSettings stroke={1.5} />
+        </div>
       </div>
     </header>
   );
