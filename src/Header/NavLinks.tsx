@@ -11,9 +11,9 @@ const NavLinks = () => {
     { name: "About Us", url: "about-us" },
   ];
   return (
-    <div className="flex gap-12">
+    <div className="flex gap-12 h-full items-center text-mine-shaft-200">
       {Links.map((link, index) => (
-        <div>
+        <div className={`border-t-[3px] h-full flex items-center`}>
           <Link key={index} to={link.url}>
             {link.name}
           </Link>
