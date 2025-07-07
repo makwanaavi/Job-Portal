@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "@mantine/carousel";
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 const JobCategory = () => {
   return (
@@ -15,20 +16,25 @@ const JobCategory = () => {
       <Carousel
         slideSize="22%"
         slideGap="md"
-        controlsOffset="md"
-        controlSize={27}
+        height={180}
+        nextControlIcon={
+          <IconArrowRight className="bg-bright-sun-400 rounded-full h-8 w-8 border border-bright-sun-400" />
+        }
+        previousControlIcon={
+          <IconArrowLeft className="bg-bright-sun-400 rounded-full h-8 w-8 border border-bright-sun-400" />
+        }
         withIndicators={false}
         emblaOptions={{
           loop: true,
           dragFree: true,
           align: "center",
-        }} 
-        className="mt-16"
+        }}
+        className="mt-16 "
       >
         {/* Each card should be a Carousel.Slide */}
         <Carousel.Slide>
           {/* UI-UX Designer */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 ">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3   cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/UI-UX Designer.png"
@@ -50,7 +56,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Content Writing */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Content Writing.png"
@@ -72,7 +78,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Data Entry */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Data Entry.png"
@@ -94,7 +100,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Customer Support */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Customer Support.png"
@@ -116,7 +122,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Sales */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Sales.png"
@@ -138,7 +144,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Finance */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Finance.png"
@@ -160,7 +166,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Human Resource */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Human Resource.png"
@@ -182,7 +188,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Digital Marketing */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Digital Marketing.png"
@@ -204,7 +210,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Web Developer */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Web Developer.png"
@@ -226,7 +232,7 @@ const JobCategory = () => {
 
         <Carousel.Slide>
           {/* Arts & Design */}
-          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3">
+          <div className="flex flex-col items-center w-64 p-4 bg-white/5 border border-bright-sun-400 rounded-2xl shadow-md space-y-3 cursor-pointer hover:shadow-[0_0_5px_2px_#ffd149]">
             <div className="p-3 bg-bright-sun-300 rounded-full">
               <img
                 src="/Category/Arts & Design.png"
