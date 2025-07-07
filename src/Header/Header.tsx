@@ -9,7 +9,7 @@ import { Avatar } from "@mantine/core";
 
 const Header = () => {
   return (
-    <header className="w-full bg-black h-28 text-white flex justify-between items-center px-6">
+    <header className="w-full bg-mine-shaft-950 h-28 text-white flex justify-between items-center px-6">
       <div className="flex justify-center items-center gap-3">
         <IconBriefcaseFilled
           className="h-10 w-10 text-white"
@@ -37,4 +37,3 @@ const Header = () => {
 };
 
 export default Header;
-    
