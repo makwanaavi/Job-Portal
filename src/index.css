@@ -14,4 +14,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} 
+
+::selection {
+  color: white;
+  background-color: #FFBD20;
 }
