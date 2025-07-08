@@ -36,10 +36,11 @@ export default function App() {
         "#3d3d3d",
       ],
     },
+    fontFamily : "poppins, sans-serif"
   });
 
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <BrowserRouter>
         <Header />
         <Routes>
