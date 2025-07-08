@@ -47,7 +47,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/find-jobs" element={<FindJobs />}></Route>
-           <Route path="/find-talent" element={<FindTelentPage />}></Route>
+           <Route path="/find-talent" element={<FindTelentPage/>}></Route>
           <Route path="*" element={<HomePage />}></Route>
         </Routes>
         <Footer />
