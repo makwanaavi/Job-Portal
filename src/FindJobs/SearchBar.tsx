@@ -28,7 +28,7 @@ const SearchBar = () => {
           color="brightSun.4"
           value={value}
           onChange={setValue}
-        //   labelAlwaysOn
+          //   labelAlwaysOn
           labelTransitionProps={{
             transition: "skew-down",
             duration: 150,
