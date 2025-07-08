@@ -1,3 +1,5 @@
+import { title } from "process";
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const companies = [
   "Google",
@@ -86,7 +88,6 @@ export const jobCategories = [
   },
 ];
 
-
 // Data.jsx
 
 export const testimonials = [
@@ -94,7 +95,8 @@ export const testimonials = [
     name: "Shivam Patel",
     avatar: "avatar-9.png",
     rating: 2.5,
-    message: "This job portal made job search easy and quick. Recommended to all job seekers!",
+    message:
+      "This job portal made job search easy and quick. Recommended to all job seekers!",
   },
   {
     name: "Anjali Mehta",
@@ -116,3 +118,11 @@ export const testimonials = [
   },
 ];
 
+export const FooterLinks = [
+  { title: "Products", links: ["Find Job", "Find Company", "Find Employee"] },
+  {
+    title: "Company",
+    links: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"],
+  },
+  { title: "Support", links: ["Help & Support", "Feedback", "FAQs"] },
+];

@@ -13,7 +13,7 @@ const Header = () => {
         <IconAnchor className="h-8 w-8 " stroke={2.5} />
         <div className="text-3xl font-semibold ">JobHook</div>
       </div>
-      <NavLinks/>
+      <NavLinks />
       {/* {NavLinks()} */}
       <div className="flex gap-3 items-center">
         <div className="flex items-center gap-1 active:scale-125 transition-all">
