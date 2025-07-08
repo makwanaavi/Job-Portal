@@ -39,7 +39,7 @@ export default function App() {
     <MantineProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<HomePage />}></Route>
+          <Route path="*" element={<HomePage/>}></Route>
         </Routes>
       </BrowserRouter>
     </MantineProvider>

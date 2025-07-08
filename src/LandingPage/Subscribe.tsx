@@ -14,7 +14,6 @@ const Subscribe = () => {
       <div className="flex items-center justify-center gap-4 bg-mine-shaft-900 ">
         <TextInput
           size="xl"
-          
           rightSectionPointerEvents="none"
           placeholder="your@email.com"
         />
