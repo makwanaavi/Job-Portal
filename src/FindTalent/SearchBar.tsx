@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import MultiInput from "../FindJobs/MultiSelectCreatable";
-import { searchField } from "../Data/FindTalent";
 import { Divider, RangeSlider } from "@mantine/core";
+import { IconUserCircle } from "@tabler/icons-react";
+import { searchField } from "../Data/FindTalent";
 
 const SearchBar = () => {
   const [value, setValue] = useState<[number, number]>([1, 100]);
   return (
     <div className="flex px-6 py-8">
+      <div>
+        <div>
+            <IconUserCircle className="text-bright-sun-400 bg-mine-shaft-900 rounded-full " size={20}/>
+        </div>
+
+
+      </div>
       {searchField.map((item, index) => (
         <>
           <div className="w-1/5" key={index}>
@@ -28,7 +36,6 @@ const SearchBar = () => {
           color="brightSun.4"
           value={value}
           onChange={setValue}
-          //   labelAlwaysOn
           labelTransitionProps={{
             transition: "skew-down",
             duration: 150,
