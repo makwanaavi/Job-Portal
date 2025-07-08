@@ -172,3 +172,74 @@ export const FooterLinks = [
     option: ["Full Time", "Part Time", "Contract", "Freelance", "Intership"],
   },
 ];
+
+
+
+export const JobList = [
+  {
+    jobtitle: "UI/UX Designer",
+    company: "Amazon",
+    Applicants: 42,
+    experiance: "Mid Level",
+    jobtype: "Full Time",
+    location: "San Francisco",
+    pacage: "28LPA",
+    PostedDayago: 4,
+    decription: "Amazon is hiring a creative UI/UX Designer to shape seamless user experiences across web and mobile."
+  },
+  {
+    jobtitle: "Product Designer",
+    company: "Meta",
+    Applicants: 25,
+    experiance: "Entry Level",
+    jobtype: "Full Time",
+    location: "New York",
+    pacage: "32LPA",
+    PostedDayago: 12,
+    decription: "Meta is seeking a Product Designer to join a fast-moving design team focused on innovation."
+  },
+  {
+    jobtitle: "Backend Developer",
+    company: "Netflix",
+    Applicants: 36,
+    experiance: "Senior Level",
+    jobtype: "Remote",
+    location: "Los Angeles",
+    pacage: "45LPA",
+    PostedDayago: 7,
+    decription: "Netflix is looking for a skilled Backend Developer to build scalable systems and microservices."
+  },
+  {
+    jobtitle: "Product Designer",
+    company: "Spotify",
+    Applicants: 18,
+    experiance: "Entry Level",
+    jobtype: "Contract",
+    location: "Berlin",
+    pacage: "26LPA",
+    PostedDayago: 2,
+    decription: "Spotify is on the hunt for a fresh-thinking Product Designer to shape intuitive audio experiences."
+  },
+  {
+    jobtitle: "SMM Manager",
+    company: "Apple",
+    Applicants: 54,
+    experiance: "Mid Level",
+    jobtype: "Full Time",
+    location: "Mumbai",
+    pacage: "20LPA",
+    PostedDayago: 10,
+    decription: "Apple is hiring a Social Media Marketing Manager to lead campaigns across Instagram, Twitter & YouTube."
+  },
+  {
+    jobtitle: "UI/UX Designer",
+    company: "Adobe",
+    Applicants: 31,
+    experiance: "Entry Level",
+    jobtype: "Internship",
+    location: "Bangalore",
+    pacage: "6LPA",
+    PostedDayago: 1,
+    decription: "Adobe is seeking an enthusiastic UI/UX Design Intern to contribute to real-time product interface challenges."
+  }
+];

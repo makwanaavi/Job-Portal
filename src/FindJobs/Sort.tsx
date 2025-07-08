@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { Button, Combobox, useCombobox, Text, Box } from "@mantine/core";
 import { IconAdjustmentsAlt } from "@tabler/icons-react";
