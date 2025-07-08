@@ -20,14 +20,19 @@ const Works = () => {
             alt="Girl image"
             className="h-[30rem] w-[30rem]"
           />
-          <div className="absolute -right-12 top-[14%] w-fit mb-1 border border-bright-sun-400 rounded-lg p-4 backdrop-blur-md">
-            <div className="flex justify-center">
-              <Avatar src="avatar-9.png" size={64}/>
+          <div className="absolute -right-20 top-[6%] border border-bright-sun-400 bg-white/5 backdrop-blur-lg rounded-xl shadow-lg p-5 w-56">
+            <div className="flex justify-center mb-3">
+              <Avatar src="avatar-9.png" size={64} />
             </div>
-            <div className="text-center text-mine-shaft-100 text-base">
+            <div className="text-center text-mine-shaft-100 text-base font-medium">
               Complete your profile
             </div>
-            <div className="text-center text-mine-shaft-100 text-sm">70% Completed</div>
+            <div className="text-center text-mine-shaft-200 text-sm mt-1">
+              70% Completed
+            </div>
+            <div className="mt-3 w-full h-2 bg-mine-shaft-700 rounded-full overflow-hidden">
+              <div className="h-full bg-bright-sun-400 w-[70%] transition-all duration-300"></div>
+            </div>
           </div>
         </div>
 
@@ -41,7 +46,7 @@ const Works = () => {
               />
             </div>
             <div>
-              <div className="text-mine-shaft-100 text-xl">
+              <div className="text-mine-shaft-100 text-xl font-semibold  ">
                 Your Resume Build Your Resume
               </div>
               <div className="text-mine-shaft-300">
@@ -59,7 +64,10 @@ const Works = () => {
               />
             </div>
             <div>
-              <div className="text-mine-shaft-100 text-xl"> Apply for Job</div>
+              <div className="text-mine-shaft-100 text-xl font-semibold">
+                {" "}
+                Apply for Job
+              </div>
               <div className="text-mine-shaft-300">
                 Find and apply for jobs that match your skills.
               </div>
@@ -71,7 +79,10 @@ const Works = () => {
               <img src="/Working/Get hired.png" alt="" className="h-12 w-12" />
             </div>
             <div>
-              <div className="text-mine-shaft-100 text-xl"> Get Hired</div>
+              <div className="text-mine-shaft-100 text-xl font-semibold">
+                {" "}
+                Get Hired
+              </div>
               <div className="text-mine-shaft-300">
                 Connect with employers and start your new job.
               </div>
