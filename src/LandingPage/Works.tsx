@@ -6,7 +6,7 @@ const Works = () => {
   return (
     <div className="mt-20 pb-5">
       <div className="text-4xl font-semibold mb-4 text-mine-shaft-100 text-center">
-        How it <span className="text-bright-sun-400">Works</span>
+        How It <span className="text-bright-sun-400">Works</span>
       </div>
       <div className="text-mine-shaft-200 text-center w-1/2 mx-auto">
         Explore diverse job opportunities tailored to your skills. Start your
