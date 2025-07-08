@@ -51,6 +51,7 @@ const Footer = () => {
           ))}
         </div>
       ))}
+      <hr />
     </div>
   );
 };
