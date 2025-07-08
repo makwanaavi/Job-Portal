@@ -9,6 +9,7 @@ const Companies = () => {
         Trusted By <span className="text-bright-sun-400">1000+</span> Companies
       </div>
 
+      {/* left to right animation */}
       <Marquee pauseOnHover={true}>
         {companies.map((company, index) => (
           <div key={index}>
@@ -19,7 +20,6 @@ const Companies = () => {
             />
           </div>
         ))}
-       
       </Marquee>
     </div>
   );
