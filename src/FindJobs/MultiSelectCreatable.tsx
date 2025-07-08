@@ -8,25 +8,29 @@ import {
   PillsInput,
   useCombobox,
 } from "@mantine/core";
-import { IconSearch } from "@tabler/icons-react";
-import { useState } from "react";
+import { IconSearch, IconSelector } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 
-const groceries = [
-  "🍎 Apples",
-  "🍌 Bananas",
-  "🥦 Broccoli",
-  "🥕 Carrots",
-  "🍫 Chocolate",
-];
+// const groceries = [
+//   "🍎 Apples",
+//   "🍌 Bananas",
+//   "🥦 Broccoli",
+//   "🥕 Carrots",
+//   "🍫 Chocolate",
+// ];
 
-const MultiInput = () => {
+const MultiInput = (props: any) => {
+  useEffect(() => {
+    setData(props.option);
+  }, []);
+
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
     onDropdownOpen: () => combobox.updateSelectedOptionIndex("active"),
   });
 
   const [search, setSearch] = useState("");
-  const [data, setData] = useState(groceries);
+  const [data, setData] = useState<string[]>([]);
   const [value, setValue] = useState<string[]>([]);
 
   const exactOptionMatch = data.some((item) => item === search);
@@ -84,10 +88,10 @@ const MultiInput = () => {
         <PillsInput
           onClick={() => combobox.toggleDropdown()}
           variant="unstyle"
-          rightSection={<Combobox.Chevron />}
+          rightSection={<IconSelector/>}
           leftSection={
-            <div className="text-bright-sun-100 p-1 bg-mine-shaft-900 rounded-full mr-1">
-              <IconSearch />
+            <div className="text-bright-sun-400 p-1 bg-mine-shaft-900 rounded-full mr-2">
+              <props.icon/>
             </div>
           }
         >
@@ -99,7 +103,7 @@ const MultiInput = () => {
               </>
             ) : (
               <Input.Placeholder className="!text-mine-shaft-300">
-                Job Title
+                {props.title}
               </Input.Placeholder>
             )}
           </Pill.Group>

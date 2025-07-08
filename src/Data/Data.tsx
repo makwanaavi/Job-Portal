@@ -1,4 +1,9 @@
-import { title } from "process";
+import {
+  IconBriefcase,
+  IconMapPin,
+  IconRecharging,
+  IconSearch,
+} from "@tabler/icons-react";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const companies = [
@@ -125,4 +130,45 @@ export const FooterLinks = [
     links: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"],
   },
   { title: "Support", links: ["Help & Support", "Feedback", "FAQs"] },
+];
+
+  export const dropdwonData = [
+  {
+    title: "Job title",
+    icon: IconSearch,
+    option: [
+      "Designer",
+      "Developer",
+      "Product Manager",
+      "Marketing Specilist",
+      "Data Anaylct",
+      "Sales Excutive",
+      "Conetecct writter",
+      "Customer Support",
+    ],
+  },
+  {
+    title: "Location",
+    icon: IconMapPin,
+    option: [
+      "Delhi",
+      "New York",
+      "San Francion",
+      "London",
+      "Berlin",
+      "Tokyo",
+      "Syden",
+      "Toranto",
+    ],
+  },
+  {
+    title: "Experiance",
+    icon: IconBriefcase,
+    option: ["Entery Level", "InterMediate", "Expert"],
+  },
+  {
+    title: "Job Type",
+    icon: IconRecharging,
+    option: ["Full Time", "Part Time", "Contract", "Freelance", "Intership"],
+  },
 ];
