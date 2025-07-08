@@ -86,3 +86,33 @@ export const jobCategories = [
   },
 ];
 
+
+// Data.jsx
+
+export const testimonials = [
+  {
+    name: "Shivam Patel",
+    avatar: "avatar-9.png",
+    rating: 2.5,
+    message: "This job portal made job search easy and quick. Recommended to all job seekers!",
+  },
+  {
+    name: "Anjali Mehta",
+    avatar: "avatar-8.png",
+    rating: 4.5,
+    message: "User-friendly interface and great job recommendations!",
+  },
+  {
+    name: "Rahul Sharma",
+    avatar: "avatar-7.png",
+    rating: 5,
+    message: "Found my dream job within a week. Thanks to this platform!",
+  },
+  {
+    name: "Priya Verma",
+    avatar: "avatar-8.png",
+    rating: 4,
+    message: "Highly efficient and easy to use. Will recommend to friends.",
+  },
+];
+
