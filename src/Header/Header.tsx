@@ -8,12 +8,12 @@ import NavLinks from "./NavLinks";
 
 const Header = () => {
   return (
-    <header className="w-full bg-mine-shaft-950/80 h-24 text-white flex justify-between items-center px-6">
+    <header className="w-full bg-mine-shaft-950 h-24 text-white flex justify-between items-center px-6  font-['poppins']">
       <div className="flex justify-center items-center gap-1 text-bright-sun-400 cursor-pointer active:scale-125 transition-all">
         <IconAnchor className="h-8 w-8 " stroke={2.5} />
         <div className="text-3xl font-semibold ">JobHook</div>
       </div>
-      <NavLinks />
+      <NavLinks/>
       {/* {NavLinks()} */}
       <div className="flex gap-3 items-center">
         <div className="flex items-center gap-1 active:scale-125 transition-all">
