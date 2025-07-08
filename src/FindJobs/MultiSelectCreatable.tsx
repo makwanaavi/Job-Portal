@@ -1,6 +1,5 @@
 import {
   Checkbox,
-  CheckIcon,
   Combobox,
   Group,
   Input,
@@ -8,7 +7,7 @@ import {
   PillsInput,
   useCombobox,
 } from "@mantine/core";
-import { IconSearch, IconSelector } from "@tabler/icons-react";
+import { IconSelector } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 
 // const groceries = [
