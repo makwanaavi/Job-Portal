@@ -1,4 +1,4 @@
-import { createTheme, MantineProvider } from "@mantine/core";
+import { createTheme, Divider, MantineProvider } from "@mantine/core";
 // import "./App.css";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
@@ -50,6 +50,8 @@ export default function App() {
     <MantineProvider theme={theme} defaultColorScheme="dark">
       <BrowserRouter>
         <Header />
+      <Divider size="xs" />
+
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/find-jobs" element={<FindJobs />}></Route>
