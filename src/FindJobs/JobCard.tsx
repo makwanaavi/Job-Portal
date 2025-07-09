@@ -4,53 +4,52 @@ import React from "react";
 
 const JobCard = (props: any) => {
   return (
-    <div className="bg-mine-shaft-900 w-72 p-4 flex flex-col gap-3 border border-bright-sun-400 rounded-xl hover:shadow-[0_0_5px_1px_yellow]  !shadow-bright-sun-400">
-      <div className="flex justify-between">
-        <div className="flex gap-2 items-center">
-          <div className="p-2 bg-mine-shaft-800 rounded-md">
+    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 duration-300 w-full p-5 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-md hover:scale-[1.02] transform transition-all ease-in-out">
+      {/* Top Section */}
+      <div className="flex justify-between items-start">
+        <div className="flex gap-3 items-center">
+          <div className="p-2 bg-mine-shaft-800 rounded-lg">
             <img
               src={`/Icons/${props.company}.png`}
-              alt=""
-              className="h-7 "
+              alt={props.company}
+              className="h-7 w-7 object-contain"
             />
           </div>
           <div>
-            <div className="font-semibold">{props.jobtitle}</div>
-            <div className="text-xs text-mine-shaft-300">
-              {props.company} &#2022; {props.Applicants} Applicant
+            <div className="font-semibold text-mine-shaft-100">{props.jobtitle}</div>
+            <div className="text-xs text-mine-shaft-400">
+              {props.company} • {props.Applicants} Applicants
             </div>
           </div>
         </div>
-        <div>
-          <IconBookmark className="text-mine-shaft-400 cursor-pointer" />
-        </div>
+        <IconBookmark className="text-bright-sun-400 hover:scale-110 transition-transform cursor-pointer" />
       </div>
-      <div className="flex gap-2">
-        <div className="py-1 px-2 bg-mine-shaft-800 text-bright-sun-400 rounded-md text-sm">
+
+      {/* Tags */}
+      <div className="flex gap-2 flex-wrap">
+        <span className="py-1 px-3 bg-mine-shaft-800 text-bright-sun-300 rounded-full text-xs font-medium">
           {props.experiance}
-        </div>
-        <div className="py-1 px-2 bg-mine-shaft-800 text-bright-sun-400 rounded-md text-sm">
+        </span>
+        <span className="py-1 px-3 bg-mine-shaft-800 text-bright-sun-300 rounded-full text-xs font-medium">
           {props.jobtype}
-        </div>
-        <div className="py-1 px-2 bg-mine-shaft-800 text-bright-sun-400 rounded-md text-sm">
+        </span>
+        <span className="py-1 px-3 bg-mine-shaft-800 text-bright-sun-300 rounded-full text-xs font-medium">
           {props.location}
-        </div>
+        </span>
       </div>
-      <div className="">
-        <Text
-          lineClamp={2}
-          className="!text-sm !text-justify !text-mine-shaft-300"
-        >
-          {props.decription}
-        </Text>
-      </div>
+
+      {/* Description */}
+      <Text lineClamp={3} className="!text-sm !text-justify !text-mine-shaft-300 leading-relaxed">
+        {props.decription}
+      </Text>
+
       <Divider size="xs" color="mineShaft.7" />
-      <div className="flex justify-between">
-        <div className="font-semibold text-mine-shaft-200">
-          &#8377;{props.pacage}
-        </div>
-        <div className="flex items-center gap-1 text-xs text-mine-shaft-400">
-          <IconClockHour3 stroke={1.5} className="h-5 w-5" />{" "}
+
+      {/* Footer */}
+      <div className="flex justify-between items-center text-sm">
+        <div className="font-semibold text-bright-sun-400">₹{props.pacage}</div>
+        <div className="flex items-center gap-1 text-mine-shaft-400">
+          <IconClockHour3 className="h-4 w-4" stroke={1.5} />
           {props.PostedDayago} Days Ago
         </div>
       </div>
@@ -59,4 +58,3 @@ const JobCard = (props: any) => {
 };
 
 export default JobCard;
-

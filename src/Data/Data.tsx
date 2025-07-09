@@ -185,7 +185,20 @@ export const JobList = [
     location: "San Francisco",
     pacage: "28LPA",
     PostedDayago: 4,
-    decription: "Amazon is hiring a creative UI/UX Designer to shape seamless user experiences across web and mobile."
+    decription:
+      "Amazon is hiring a creative UI/UX Designer to shape seamless user experiences across web and mobile.",
+  },
+  {
+    jobtitle: "Frontend Developer",
+    company: "Google",
+    Applicants: 35,
+    experiance: "Entry Level",
+    jobtype: "Full Time",
+    location: "Bangalore",
+    pacage: "22LPA",
+    PostedDayago: 6,
+    decription:
+      "Google is seeking a Frontend Developer to build modern, accessible, and scalable user interfaces.",
   },
   {
     jobtitle: "Product Designer",
@@ -196,7 +209,8 @@ export const JobList = [
     location: "New York",
     pacage: "32LPA",
     PostedDayago: 12,
-    decription: "Meta is seeking a Product Designer to join a fast-moving design team focused on innovation."
+    decription:
+      "Meta is seeking a Product Designer to join a fast-moving design team focused on innovation.",
   },
   {
     jobtitle: "Backend Developer",
@@ -207,7 +221,20 @@ export const JobList = [
     location: "Los Angeles",
     pacage: "45LPA",
     PostedDayago: 7,
-    decription: "Netflix is looking for a skilled Backend Developer to build scalable systems and microservices."
+    decription:
+      "Netflix is looking for a skilled Backend Developer to build scalable systems and microservices.",
+  },
+  {
+    jobtitle: "UX Researcher",
+    company: "LinkedIn",
+    Applicants: 19,
+    experiance: "Mid Level",
+    jobtype: "Contract",
+    location: "London",
+    pacage: "30LPA",
+    PostedDayago: 9,
+    decription:
+      "LinkedIn is hiring a UX Researcher to gather insights and shape product decisions through user testing.",
   },
   {
     jobtitle: "Product Designer",
@@ -218,7 +245,8 @@ export const JobList = [
     location: "Berlin",
     pacage: "26LPA",
     PostedDayago: 2,
-    decription: "Spotify is on the hunt for a fresh-thinking Product Designer to shape intuitive audio experiences."
+    decription:
+      "Spotify is on the hunt for a fresh-thinking Product Designer to shape intuitive audio experiences.",
   },
   {
     jobtitle: "SMM Manager",
@@ -229,7 +257,8 @@ export const JobList = [
     location: "Mumbai",
     pacage: "20LPA",
     PostedDayago: 10,
-    decription: "Apple is hiring a Social Media Marketing Manager to lead campaigns across Instagram, Twitter & YouTube."
+    decription:
+      "Apple is hiring a Social Media Marketing Manager to lead campaigns across Instagram, Twitter & YouTube.",
   },
   {
     jobtitle: "UI/UX Designer",
@@ -240,6 +269,20 @@ export const JobList = [
     location: "Bangalore",
     pacage: "6LPA",
     PostedDayago: 1,
-    decription: "Adobe is seeking an enthusiastic UI/UX Design Intern to contribute to real-time product interface challenges."
-  }
+    decription:
+      "Adobe is seeking an enthusiastic UI/UX Design Intern to contribute to real-time product interface challenges.",
+  },
+  {
+    jobtitle: "DevOps Engineer",
+    company: "Microsoft",
+    Applicants: 27,
+    experiance: "Senior Level",
+    jobtype: "Full Time",
+    location: "Hyderabad",
+    pacage: "38LPA",
+    PostedDayago: 5,
+    decription:
+      "Microsoft is hiring a DevOps Engineer to manage CI/CD pipelines and cloud infrastructure on Azure.",
+  },
 ];
+
