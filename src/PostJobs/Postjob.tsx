@@ -43,7 +43,7 @@ const Postjob = () => {
 
         <div className="flex gap-4">
           <Button color="brightSun.4" variant="light">
-            publish Job
+            Publish Job
           </Button>
 
           <Button color="brightSun.4" variant="outline">
