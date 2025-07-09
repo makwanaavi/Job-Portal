@@ -1,9 +1,8 @@
 import { Avatar, Divider, Tabs } from "@mantine/core";
 import { IconMapPin } from "@tabler/icons-react";
-import React, { useState } from "react";
+import About from "./AboutCom";
 
 const Company = () => {
-  const [activeTab, setActiveTab] = useState<string | null>("first");
   return (
     <div className="w-3/4">
       <div className="relative">
@@ -36,14 +35,18 @@ const Company = () => {
         <Divider size="xs" my="xl" />
 
         <div>
-          <Tabs value={activeTab} variant="outline" radius="lg"  onChange={setActiveTab}>
-            <Tabs.List>
-              <Tabs.Tab value="first">First tab</Tabs.Tab>
-              <Tabs.Tab value="second">Second tab</Tabs.Tab>
+          <Tabs variant="outline" radius="lg"  defaultValue={"about"}>
+            <Tabs.List className="[&_button]:!text-lg font-semibold [&_button[data-active='true']]:text-bright-sun-400">
+              <Tabs.Tab value="about">About</Tabs.Tab>
+              <Tabs.Tab value="jobs">Jobs</Tabs.Tab>
+              <Tabs.Tab value="employees">Employees</Tabs.Tab>
+
             </Tabs.List>
 
-            <Tabs.Panel value="first">First panel</Tabs.Panel>
+            <Tabs.Panel value="first"><About/></Tabs.Panel>
             <Tabs.Panel value="second">Second panel</Tabs.Panel>
+            <Tabs.Panel value="second">Second panel</Tabs.Panel>
+
           </Tabs>
         </div>
       </div>

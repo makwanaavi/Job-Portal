@@ -1,7 +1,7 @@
 import { Button, Divider } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
-import Company from "../Company/Company";
+import Company from "../CompanyProfile/Company";
 
 const CompanyPage = () => {
   return (
