@@ -77,7 +77,7 @@ export const talents = [
       about: "As a Frontend Developer at Facebook, I focus on creating visually appealing and highly interactive web applications. My expertise in HTML, CSS, and JavaScript allows me to build responsive and user-friendly interfaces that enhance user experience. I am dedicated to staying current with the latest trends and best practices in web development to ensure optimal performance and accessibility. I thrive in collaborative environments where I can contribute to innovative projects and deliver solutions that meet user expectations.",
       expectedCtc: "₹40 - 55LPA",
       location: "San Francisco, United States",
-      image:"avatar1"
+      image:"avatar-7"
     },
     {
       name: "Bob Smith",
@@ -97,7 +97,7 @@ export const talents = [
         about: "As a UX/UI Designer at Adobe, I am dedicated to crafting visually compelling and user-centric designs. My expertise in Figma, Sketch, and InVision allows me to create intuitive interfaces that enhance user experience across digital platforms. I am passionate about translating complex ideas into clean and effective designs that align with user needs and business goals. My design process involves thorough research, user testing, and iterative design to ensure the highest quality and user satisfaction.",
         expectedCtc: "₹35 - 50LPA",
         location: "Los Angeles, United States",
-        image:"avatar2"
+        image:"avatar-9"
       },
     {
       name: "Charlie Brown",
@@ -117,7 +117,7 @@ export const talents = [
         about: "As a DevOps Engineer at Netflix, I focus on automating infrastructure and optimizing deployment processes to support scalable applications. My expertise in Docker, Kubernetes, and AWS enables me to manage and streamline complex cloud environments efficiently. I am dedicated to improving operational efficiency and reliability through continuous integration and delivery practices. My role involves collaborating with development teams to ensure seamless deployment and maintenance of applications, enhancing overall system performance and resilience.",
         expectedCtc: "₹50 - 65LPA",
         location: "Los Gatos, United States",
-        image:"avatar1"
+        image:"avatar-7"
       },
     {
       name: "Ethan Hunt",
@@ -137,7 +137,7 @@ export const talents = [
         about: "As a Mobile App Developer at Apple, I specialize in creating intuitive and high-performance iOS applications. With expertise in Swift and Xcode, I design and develop apps that offer seamless user experiences and adhere to the highest standards of quality and performance. My role involves collaborating with cross-functional teams to deliver innovative features and ensure smooth integration with Apple's ecosystem. I am passionate about leveraging the latest technologies to build apps that delight users and drive engagement.",
         expectedCtc: "₹55 - 70LPA",
         location: "Cupertino, United States",
-        image:"avatar2"
+        image:"avatar-8"
       },
       {
         name: "George Lucas",
