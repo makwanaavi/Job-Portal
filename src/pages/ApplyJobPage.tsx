@@ -1,6 +1,7 @@
 import { Button } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import ApplyJobsCom from "../ApplyJobs/ApplyJobsCom";
 
 const ApplyJobPage = () => {
   return (
@@ -13,6 +14,7 @@ const ApplyJobPage = () => {
 
         </Link>
       </div>
+        <ApplyJobsCom/>
     </div>
   );
 };
