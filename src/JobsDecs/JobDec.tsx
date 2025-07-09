@@ -1,6 +1,5 @@
 import { ActionIcon, Button, Divider } from "@mantine/core";
-import { IconAdjustments, IconBookmark, IconMapPin } from "@tabler/icons-react";
-import React from "react";
+import { IconBookmark } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import { card, desc, skills } from "../Data/JobDescData";
 import DOMPurify from "dompurify";
@@ -27,7 +26,7 @@ const JobDec = () => {
           </div>
         </div>
         <div className="flex flex-col gap-2 items-center ">
-          <Link to={"/apply-jobs"}>
+          <Link to={"/apply-job"}>
             <Button color="brightSun.4" variant="light" size="sm">
               Apply
             </Button>
@@ -86,8 +85,31 @@ const JobDec = () => {
       <Divider size="xs" my="xl" />
       <div>
         <div className="text-xl font-semibold mb-5">About Company</div>
-        <div>
-            
+        <div className="flex justify-between items-start mb-3">
+          <div className="flex gap-3 items-center ">
+            <div className="p-3 bg-mine-shaft-800 rounded-xl">
+              <img src={`/Icons/Google.png`} alt="Google" className="h-8" />
+            </div>
+            <div className="flex flex-col">
+              <div className="font-medium text-lg text-mine-shaft-100">
+                Google
+              </div>
+              <div className="text-lg text-mine-shaft-300">10k+ Employees</div>
+            </div>
+          </div>
+          <Link to={"/apply-jobs"}>
+            <Button color="brightSun.4" variant="light">
+              Company Page
+            </Button>
+          </Link>
+        </div>
+        <div className="text-mine-shaft-300 text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          dolorem! Praesentium dolorum deserunt atque eaque temporibus fuga
+          aliquid in, asperiores fugiat magni illo quam fugit aspernatur dolorem
+          hic consequatur assumenda illum iusto sint. Quisquam praesentium quod
+          earum sapiente blanditiis accusantium sequi laborum ipsa eaque
+          adipisci?
         </div>
       </div>
     </div>
