@@ -1,4 +1,3 @@
-import { Divider } from "@mantine/core";
 import Postjob from "../PostJobs/Postjob";
 
 const PostJob = () => {

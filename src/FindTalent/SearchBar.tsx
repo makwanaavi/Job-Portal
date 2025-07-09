@@ -7,7 +7,7 @@ import { IconUserCircle } from "@tabler/icons-react";
 const SearchBar = () => {
   const [value, setValue] = useState<[number, number]>([1, 100]);
   return (
-    <div className="flex px-6 py-8 items-center !text-mine-shaft-100 ">
+    <div className="flex px-6 py-8 !text-mine-shaft-100 gap-4">
       <div className="flex items-center">
         <div className="bg-mine-shaft-900 rounded-full text-bright-sun-400 mr-2 p-1">
           <IconUserCircle size={24} />
