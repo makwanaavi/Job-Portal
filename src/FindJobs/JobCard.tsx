@@ -1,10 +1,11 @@
 import { Divider, Text } from "@mantine/core";
 import { IconBookmark, IconClockHour3 } from "@tabler/icons-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const JobCard = (props: any) => {
   return (
-    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 duration-300 w-full p-5 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-md hover:scale-[1.02] transform transition-all ease-in-out">
+    <Link to={'/jobs'} className="bg-mine-shaft-900 hover:bg-mine-shaft-800 duration-300 w-full p-5 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-md hover:scale-[1.02] transform transition-all ease-in-out">
       {/* Top Section */}
       <div className="flex justify-between items-start">
         <div className="flex gap-3 items-center">
@@ -16,7 +17,9 @@ const JobCard = (props: any) => {
             />
           </div>
           <div>
-            <div className="font-semibold text-mine-shaft-100">{props.jobtitle}</div>
+            <div className="font-semibold text-mine-shaft-100">
+              {props.jobtitle}
+            </div>
             <div className="text-xs text-mine-shaft-400">
               {props.company} • {props.Applicants} Applicants
             </div>
@@ -39,7 +42,10 @@ const JobCard = (props: any) => {
       </div>
 
       {/* Description */}
-      <Text lineClamp={3} className="!text-sm !text-justify !text-mine-shaft-300 leading-relaxed">
+      <Text
+        lineClamp={3}
+        className="!text-sm !text-justify !text-mine-shaft-300 leading-relaxed"
+      >
         {props.decription}
       </Text>
 
@@ -53,7 +59,7 @@ const JobCard = (props: any) => {
           {props.PostedDayago} Days Ago
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
