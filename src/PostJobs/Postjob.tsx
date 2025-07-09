@@ -1,7 +1,9 @@
 import React from "react";
 import { SelectInput } from "./SelectInput";
 import { fields } from "../Data/PostJob";
-import { TagsInput } from "@mantine/core";
+import { Button, TagsInput } from "@mantine/core";
+import { TextEditor } from "./ReachTextEditor";
+import { IconArrowLeft } from "@tabler/icons-react";
 
 const Postjob = () => {
   const select = fields;
@@ -34,6 +36,20 @@ const Postjob = () => {
           acceptValueOnBlur
           splitChars={[",", " ", "|"]}
         />
+        <div className="[&_button[data-active='true']]:!text-bright-sun-400 [&_button[data-active='true']]:!bg-bright-sun-400/20">
+          <div className="text-sm font-medium">Job Description</div>
+          <TextEditor />
+        </div>
+
+        <div className="flex gap-4">
+          <Button color="brightSun.4" variant="light">
+            publish Job
+          </Button>
+
+          <Button color="brightSun.4" variant="outline">
+            Save As Now
+          </Button>
+        </div>
       </div>
     </div>
   );
