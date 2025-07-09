@@ -6,7 +6,7 @@ import CertificationCard from "./CertificationCard";
 
 const Profile = (props:any) => {
   return (
-    <div className="w-2/3 mx-auto">
+    <div className="w-2/3">
       <div className="relative">
         <img
           className="rounded-t-2xl"
