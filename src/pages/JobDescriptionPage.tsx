@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import JobDec from "../JobsDecs/JobDec";
 
 const JobDescriptionPage = () => {
   return (
@@ -16,6 +17,10 @@ const JobDescriptionPage = () => {
           Back
         </Button>
       </Link>
+
+      <div className="flex gap-5">
+        <JobDec/>
+      </div>
     </div>
   );
 };
