@@ -1,5 +1,16 @@
-import { Anchor, Button, Checkbox, PasswordInput, TextInput } from "@mantine/core";
-import { IconAt, IconLock, IconLogin2, IconSignature } from "@tabler/icons-react";
+import {
+  Anchor,
+  Button,
+  Checkbox,
+  PasswordInput,
+  TextInput,
+} from "@mantine/core";
+import {
+  IconAt,
+  IconLock,
+  IconLogin2,
+  IconSignature,
+} from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -33,11 +44,22 @@ const SignUp = () => {
         withAsterisk
         placeholder="Enter Password"
       />
-       <Checkbox 
-      label={<>I accept <Anchor>term and conditions</Anchor></>}
-    />
-    <Button leftSection={<IconLogin2/>}  variant="filled">Sign Up</Button>
-    <div className="mx-auto">Have an account?<Link to={"/login"} className="text-bright-sun-400 hover:underline"> Login</Link> </div>
+      <Checkbox
+        label={
+          <>
+            I accept <Anchor>term and conditions</Anchor>
+          </>
+        }
+      />
+      <Button leftSection={<IconLogin2 />} variant="filled">
+        Sign Up
+      </Button>
+      <div className="mx-auto">
+        Have an account?
+        <Link to={"/login"} className="text-bright-sun-400 hover:underline">
+          {" "} Login
+        </Link>
+      </div>
     </div>
   );
 };

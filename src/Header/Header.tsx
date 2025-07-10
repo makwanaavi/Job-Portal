@@ -9,8 +9,7 @@ import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-  return location.pathname != "/signup" ? (
-      <header className="w-full bg-mine-shaft-950 h-24 text-white flex justify-between items-center px-6  font-['poppins']">
+  return location.pathname != "/signup" && location.pathname != "/login" ? <header className="w-full bg-mine-shaft-950 h-24 text-white flex justify-between items-center px-6  font-['poppins']">
         <div className="flex justify-center items-center gap-1 text-bright-sun-400 cursor-pointer active:scale-125 transition-all">
           <IconAnchor className="h-8 w-8 " stroke={2.5} />
           <div className="text-3xl font-semibold ">JobHook</div>
@@ -39,8 +38,7 @@ const Header = () => {
             <IconSettings stroke={1.5} />
           </div>
         </div>
-      </header> 
-    ) :  <></>
+      </header> :  <></>
 };
 
 export default Header;

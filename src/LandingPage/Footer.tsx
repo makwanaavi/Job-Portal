@@ -10,9 +10,9 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  return location.pathname != "/signup" ? <footer className="bg-mine-shaft-950 text-white font-['Poppins'] pt-20 pb-12">
+  // eslint-disable-next-line eqeqeq
+  return location.pathname != "/signup" && location.pathname != "/login" ? <footer className="bg-mine-shaft-950 text-white font-['Poppins'] pt-20 pb-12">
       <div className="max-w-[90%] mx-auto flex flex-col md:flex-row justify-between gap-10 mb-12">
-        {/* Logo & Description */}
         <div className="flex-1">
           <div className="flex items-center gap-2 text-bright-sun-400 cursor-pointer active:scale-105 transition-transform duration-300">
             <IconAnchor className="h-7 w-7" stroke={2.5} />
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-mine-shaft-800 text-center text-sm text-mine-shaft-500 " >
+      <div className="border-t border-mine-shaft-800 text-center text-sm text-mine-shaft-500 ">
         <div className="text-center text-mine-shaft-100 text-xl mt-12">
           Designed & Developed By{" "}
           <a
@@ -69,7 +69,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer> : <> </>
+    </footer> :  <></>
 };
 
 export default Footer;
