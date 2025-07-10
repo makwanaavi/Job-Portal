@@ -8,7 +8,7 @@ import { DateInput, TimeInput } from "@mantine/dates";
 const TalentCard = (props: any) => {
   const [opened, { open, close }] = useDisclosure(false);
   const [value, setValue] = useState<string | null>(null);
-    const ref = useRef<HTMLInputElement>(null);
+  const ref = useRef<HTMLInputElement>(null);
   return (
     <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 transition duration-300 p-6 rounded-2xl border border-mine-shaft-700 hover:shadow-lg hover:scale-[1.02] w-full sm:w-[320px] flex flex-col gap-4">
       {/* Top section */}
@@ -49,43 +49,68 @@ const TalentCard = (props: any) => {
 
       <Divider size="xs" color="mineShaft.7" />
 
-      {/* Bottom Info */}
-      <div className="flex justify-between items-center text-sm">
-        <div className="text-bright-sun-400 font-semibold">
-          {props.expectedCtc}
+      {props.invited ? (
+        <div className="flex gap-1 text-mine-shaft-200 text-sm items-center">
+          <IconCalendarWeek stroke={1.5} /> InterView : August 27, 2024 10:00 AM
         </div>
-        <div className="flex items-center gap-1 text-mine-shaft-400">
-          <IconMapPin className="h-4 w-4" stroke={1.5} />
-          {props.location}
+      ) : (
+        <div className="flex justify-between items-center text-sm">
+          <div className="text-bright-sun-400 font-semibold">
+            {props.expectedCtc}
+          </div>
+          <div className="flex items-center gap-1 text-mine-shaft-400">
+            <IconMapPin className="h-4 w-4" stroke={1.5} />
+            {props.location}
+          </div>
         </div>
-      </div>
+      )}
 
       <Divider size="xs" color="mineShaft.7" />
 
       {/* Buttons */}
       <div className="flex gap-2">
-        <Link to="/talent-profile" className="w-1/2">
-          <Button color="brightSun.4" variant="outline" fullWidth>
-            Profile
-          </Button>
-        </Link>
-        <div className="w-1/2">
-          {props.posted ? (
-            <Button
-              onClick={open}
-              color="brightSun.4"
-              variant="light"
-              fullWidth
-              rightSection={<IconCalendarWeek className="w-5 h-5" />}
-            >
-              Schedule
-            </Button>
-          ) : (
-            <Button color="brightSun.4" variant="light" fullWidth>
-              Message
-            </Button>
-          )}
-        </div>
+        {!props.invited && (
+          <>
+            <Link to="/talent-profile" className="w-1/2">
+              <Button color="brightSun.4" variant="outline" fullWidth>
+                Profile
+              </Button>
+            </Link>
+            <div className="w-1/2">
+              {props.posted ? (
+                <Button
+                  onClick={open}
+                  color="brightSun.4"
+                  variant="light"
+                  fullWidth
+                  rightSection={<IconCalendarWeek className="w-5 h-5" />}
+                >
+                  Schedule
+                </Button>
+              ) : (
+                <Button color="brightSun.4" variant="light" fullWidth>
+                  Message
+                </Button>
+              )}
+            </div>
+          </>
+        )}
+
+        {props.invited && (
+          <>
+            <div>
+              <Button color="brightSun.4" variant="outline" fullWidth>
+                Accept
+              </Button>
+            </div>
+
+            <div>
+              <Button color="brightSun.4" variant="light" fullWidth>
+                Reject
+              </Button>
+            </div>
+          </>
+        )}
       </div>
       <Modal opened={opened} title="Shedule InterView" onClose={close} centered>
         <div className="flex flex-col gap-4">
@@ -95,13 +120,17 @@ const TalentCard = (props: any) => {
             onChange={setValue}
             label="Date Input"
             placeholder="Enter Date"
-              clearable
+            clearable
           />
 
-          <TimeInput label="Time" ref={ref} onClick={() => ref.current?.showPicker()} />
-            <Button color="brightSun.4" variant="light" fullWidth>
+          <TimeInput
+            label="Time"
+            ref={ref}
+            onClick={() => ref.current?.showPicker()}
+          />
+          <Button color="brightSun.4" variant="light" fullWidth>
             Schedule
-            </Button>
+          </Button>
         </div>
       </Modal>
     </div>
