@@ -1,14 +1,13 @@
-import { Divider } from '@mantine/core'
-import React from 'react'
-import Profile from '../Profile/Profile'
+import Profile from "../Profile/Profile";
+import { Divider } from "@mantine/core";
 
-const ProfilePage = () => {
+const ProfilePage = (props: any) => {
   return (
     <div className='min-h-[90vh] bg-mine-shaft-950 font-["poppins"] '>
-  {/* <Divider mx="md" mb="xl"/> */}
-  <Profile/>
+      <Divider mx="md" mb="xl" />
+      <Profile />
     </div>
-  )
-}
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

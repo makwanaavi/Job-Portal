@@ -21,7 +21,6 @@ const CertificationCard = (cer: any) => {
             <div className="text-sm text-mine-shaft-200">{cer.issueDate}</div>
             <div className="text-sm text-mine-shaft-200"> {cer.certificateId}</div>
         </div>
-
       </div>
     </div>
   );

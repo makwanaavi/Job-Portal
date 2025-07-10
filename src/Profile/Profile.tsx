@@ -23,7 +23,7 @@ const Profile = (props: any) => {
     "AWS",
   ];
   return (
-    <div className="w-2/3">
+    <div className="w-4/5 mx-auto">
       <div className="relative">
         <img
           className="rounded-t-2xl"
@@ -36,7 +36,7 @@ const Profile = (props: any) => {
           alt="Profile pic"
         />
       </div>
-      <div className="px-3 mt-20 py-5">
+      <div className="px-3 !mt-20  py-5">
         <div className="text-3xl font-semibold flex justify-between">
           Jarrod Wood
           <Button color="brightSun.4" variant="light">
@@ -73,7 +73,7 @@ const Profile = (props: any) => {
             <div className="flex flex-wrap gap-3">
               {skills.map((skill: string, index: number) => (
                 <div
-                  className="bg-bright-sun-300/15 bg-opacity-15 rounded-3xl text-sm font-medium  text-bright-sun-400 px-3 py-2"
+                  className="bg-bright-sun-300/15 bg-opacity-15 rounded-3xl text-sm font-medium  text-bright-sun-400 px-3 py-2 "
                   key={index}
                 >
                   {skill}
@@ -88,10 +88,9 @@ const Profile = (props: any) => {
         <div className="px-1">
           <div className="text-2xl font-semibold mb-5">Experiance</div>
           <div className="flex flex-col gap-4">
-            {Array.isArray(props.experience) &&
-              props.experience.map((exp: any, index: any) => (
-                <ExpCard key={index} {...exp} />
-              ))}
+            {profile.experience.map((exp: any, index: any) => (
+              <ExpCard key={index} {...exp} />
+            ))}
           </div>
         </div>
 
@@ -100,10 +99,9 @@ const Profile = (props: any) => {
         <div className="px-1">
           <div className="text-2xl font-semibold mb-5">Certification</div>
           <div className="flex flex-col gap-4">
-            {Array.isArray(props.certifications) &&
-              props.certifications.map((cer: any, index: any) => (
-                <CertificationCard key={index} {...cer} />
-              ))}
+            {profile.certifications.map((cer: any, index: any) => (
+              <CertificationCard key={index} {...cer} />
+            ))}
           </div>
         </div>
       </div>
