@@ -177,7 +177,7 @@ const Card = (props: any) => {
       {/* Description */}
       <Text
         lineClamp={3}
-        className="!text-sm !text-justify !text-mine-shaft-300 leading-relaxed"
+        className="!text-sm  !text-mine-shaft-300 leading-relaxed"
       >
         {props.decription}
       </Text>
