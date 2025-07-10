@@ -1,12 +1,11 @@
 import { Avatar, Button, Divider, Text } from "@mantine/core";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IconHeart, IconMapPin } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const TalentCard = (props: any) => {
   return (
-    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 w-full  duration-300 w-fit p-6 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-lg hover:scale-[1.02] transform transition-all ease-in-out">
+    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 transition duration-300 p-6 rounded-2xl border border-mine-shaft-700 hover:shadow-lg hover:scale-[1.02] w-full sm:w-[320px] flex flex-col gap-4">
       {/* Top section */}
       <div className="flex justify-between items-start">
         <div className="flex gap-3 items-center">
@@ -45,7 +44,7 @@ const TalentCard = (props: any) => {
 
       <Divider size="xs" color="mineShaft.7" />
 
-      {/* Bottom section */}
+      {/* Bottom Info */}
       <div className="flex justify-between items-center text-sm">
         <div className="text-bright-sun-400 font-semibold">
           {props.expectedCtc}
@@ -55,15 +54,17 @@ const TalentCard = (props: any) => {
           {props.location}
         </div>
       </div>
-      <Divider color="mineShaft.7" size="xs" />
 
-      <div className="flex [&>*]:w-1/2 [&>*]:p-1">
-        <Link to={"/talent-profile"}>
+      <Divider size="xs" color="mineShaft.7" />
+
+      {/* Buttons */}
+      <div className="flex gap-2">
+        <Link to="/talent-profile" className="w-1/2">
           <Button color="brightSun.4" variant="outline" fullWidth>
             Profile
           </Button>
         </Link>
-        <div>
+        <div className="w-1/2">
           <Button color="brightSun.4" variant="light" fullWidth>
             Message
           </Button>

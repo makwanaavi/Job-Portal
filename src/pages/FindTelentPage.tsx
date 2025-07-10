@@ -4,11 +4,10 @@ import Talents from "../FindTalent/Talents";
 
 const FindTelentPage = () => {
   return (
-    <div className='min-h-[100vh] bg-mine-shaft-950 font-["poppins"]'>
-      
-      <SearchBar/>
+    <div className='min-h-[90vh] bg-mine-shaft-950 font-["poppins"]'>
+      <SearchBar />
       <Divider size="xs" mx="md" />
-      <Talents/>
+      <Talents />
     </div>
   );
 };
