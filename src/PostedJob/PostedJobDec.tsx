@@ -29,7 +29,7 @@ const PostedJobDec = () => {
           <Tabs.Panel value="Applicants">
             <div className="flex flex-wrap mt-10 gap-10">
               {talents.map((talent, index) => (
-                <TalentCard key={index} {...talent} />
+                <TalentCard key={index} {...talent} posted/>
               ))}
             </div>
           </Tabs.Panel>
