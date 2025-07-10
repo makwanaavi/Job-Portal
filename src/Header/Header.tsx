@@ -6,6 +6,7 @@ import { IconAnchor, IconBell, IconSettings } from "@tabler/icons-react";
 import { Avatar, Indicator } from "@mantine/core";
 import NavLinks from "./NavLinks";
 import { useLocation } from "react-router-dom";
+import { ProfileMenu } from "./ProfileMenu";
 
 const Header = () => {
   const location = useLocation();
@@ -17,16 +18,8 @@ const Header = () => {
         <NavLinks />
         {/* {NavLinks()} */}
         <div className="flex gap-3 items-center">
-          <div className="flex items-center gap-1 active:scale-125 transition-all">
-            <Avatar
-              src="/avatar.png"
-              alt="it's me"
-              className="cursor-pointer"
-            />
-            <div className="hover:text-bright-sun-400 cursor-pointer">
-              Avi Makwana
-            </div>
-          </div>
+          
+          <ProfileMenu/>
 
           <div className="bg-mine-shaft-900 p-2 rounded-full cursor-pointer active:scale-125 transition-all">
             <Indicator color="brightSun.4" size={9} offset={2} processing>
