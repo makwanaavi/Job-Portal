@@ -120,7 +120,6 @@
 
 // export default Card;
 
-
 import { Button, Divider, Text } from "@mantine/core";
 import {
   IconBookmark,
