@@ -1,5 +1,7 @@
 import { Tabs } from "@mantine/core";
 import React from "react";
+import Card from "./Card";
+import { JobList } from "../Data/Data";
 
 const JobHostory = () => {
   return (
@@ -14,10 +16,35 @@ const JobHostory = () => {
             <Tabs.Tab value="interviewing">Interviewing</Tabs.Tab>
           </Tabs.List>
 
-          <Tabs.Panel value="applied">t</Tabs.Panel>
-          <Tabs.Panel value="save">s</Tabs.Panel>
-          <Tabs.Panel value="offered">c</Tabs.Panel>
-          <Tabs.Panel value="interviewing">c</Tabs.Panel>
+          <Tabs.Panel value="applied">
+            {" "}
+            <div className="flex mt-10 flex-wrap gap-6">
+              {JobList.map((job, index) => (
+                <Card key={index} {...job} applied />
+              ))}
+            </div>
+          </Tabs.Panel>
+          <Tabs.Panel value="save">
+            <div className="flex mt-10 flex-wrap gap-6">
+              {JobList.map((job, index) => (
+                <Card key={index} {...job} save />
+              ))}
+            </div>
+          </Tabs.Panel>
+          <Tabs.Panel value="offered">
+            <div className="flex mt-10 flex-wrap gap-6">
+              {JobList.map((job, index) => (
+                <Card key={index} {...job} offered />
+              ))}
+            </div>
+          </Tabs.Panel>
+          <Tabs.Panel value="interviewing">
+            <div className="flex mt-10 flex-wrap gap-6">
+              {JobList.map((job, index) => (
+                <Card key={index} {...job} interviewing />
+              ))}
+            </div>
+          </Tabs.Panel>
         </Tabs>
       </div>
     </div>
