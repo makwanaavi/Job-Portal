@@ -31,9 +31,11 @@ export const ProfileMenu = () => {
       </Menu.Target>
 
       <Menu.Dropdown onChange={() => setOpened(true)}>
+        <Link to={"/profile"}>
         <Menu.Item leftSection={<IconUserCircle size={16} />}>
-        <Link to={"/profile"}>  Profile</Link>
+        Profile
         </Menu.Item>
+        </Link>
         <Menu.Item leftSection={<IconMessageCircle size={16} />}>
           Message
         </Menu.Item>

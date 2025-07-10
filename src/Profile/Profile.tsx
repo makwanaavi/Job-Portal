@@ -1,10 +1,25 @@
 import { ActionIcon, Button, Divider } from "@mantine/core";
-import { IconAdjustments, IconBriefcaseFilled, IconMapPin, IconPencil } from "@tabler/icons-react";
+import {
+  IconBookmark,
+  IconBookmarkFilled,
+  IconBriefcaseFilled,
+  IconDeviceFloppy,
+  IconMapPin,
+  IconPencil,
+} from "@tabler/icons-react";
 import ExpCard from "./ExpCard";
 import CertificationCard from "./CertificationCard";
 import { profile } from "../Data/FindTalent";
+import { useState } from "react";
 
 const Profile = () => {
+  const [edit, setEdit] = useState([false, false, false, false, false]);
+
+  const handleEdit = (index:any) =>{
+    const newEdit = [...edit]; 
+    newEdit[index] =!newEdit[index] ;
+    setEdit(newEdit)
+  }
   return (
     <div className="w-4/5 mx-auto">
       <div className="relative">
@@ -22,20 +37,23 @@ const Profile = () => {
       <div className="px-3 !mt-20  py-5">
         <div className="text-3xl font-semibold flex justify-between">
           {profile.name}
-          {/* <Button color="brightSun.4" variant="light">
-            Message
-          </Button> */}
 
-            <ActionIcon variant="subtle" aria-label="Settings">
-      <IconPencil style={{ width: '80%', height: '80%' }} />
-    </ActionIcon>
+          <ActionIcon
+          onClick={() => handleEdit(0)}
+            variant="subtle"
+            color="brightSun.4"
+            size="lg"
+          >
+            { edit[0]?<IconDeviceFloppy className="w-4/5 h-4/5" /> :<IconPencil className="w-4/5 h-4/5" /> }
+            
+          </ActionIcon>
         </div>
         <div className="text-xl flex gap-2">
           <IconBriefcaseFilled /> {profile.role} &bull; {profile.company}
         </div>
         <div className="text-lg flex items-center gap-2 text-mine-shaft-300">
           <IconMapPin className="h-5 w-5" stroke={1.5} />
-          New York, United States
+          {profile.location}
         </div>
         <Divider size="xs" my="xl" />
 
