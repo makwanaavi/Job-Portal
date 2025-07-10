@@ -4,7 +4,7 @@ import { talents } from '../Data/FindTalent'
 
 const CompanyEmployes = () => {
   return (
-   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+   <div className="flex mt-10 flex-wrap gap-10">
           {talents.map((talent, index) => (
          <TalentCard key={index} {...talent} />
           ))}

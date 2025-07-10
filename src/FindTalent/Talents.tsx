@@ -30,13 +30,13 @@ import { talents } from "../Data/FindTalent";
 
 const Talents = () => {
   return (
-    <div className="px-6 py-10 bg-mine-shaft-950 min-h-screen">
-      <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold text-bright-sun-400">Top Talents</h2>
+    <div className="px-5 py-5">
+      <div className="flex justify-between mt-5">
+        <h2 className="text-2xl font-semibold ">Talents</h2>
         <Sort />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+      <div className="flex mt-10 flex-wrap gap-5 justify-center">
         {talents.map((talent, index) => (
           <TalentCard key={index} {...talent} />
         ))}

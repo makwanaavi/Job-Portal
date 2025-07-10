@@ -2,9 +2,12 @@ import { Button, Divider } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import Company from "../CompanyProfile/Company";
+import SimilarCompanyes from "../CompanyProfile/SimilarCompanyes";
 
 const CompanyPage = () => {
   return (
+    <div className="flex">
+    
     <div className='min-h-[90vh] bg-mine-shaft-950 font-["poppins"] p-4'>
       <Link to={"/jobs"} className="my-5 inline-block">
         <Button
@@ -18,6 +21,9 @@ const CompanyPage = () => {
       <div className="flex gap-5">
         <Company />
       </div>
+    </div>
+
+    <SimilarCompanyes/>
     </div>
   );
 };

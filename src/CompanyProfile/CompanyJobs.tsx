@@ -4,7 +4,7 @@ import { JobList } from "../Data/Data";
 
 const CompanyJobs = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+    <div className="flex mt-10 flex-wrap gap-3">
       {JobList.map((job, index) => (
         <JobCard key={index} {...job} />
       ))}
