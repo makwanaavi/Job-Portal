@@ -3,7 +3,7 @@ import { IconBookmark } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import { card, desc, skills } from "../Data/JobDescData";
 import DOMPurify from "dompurify";
-const JobDec = () => {
+const JobDec = (props: any) => {
   const data = DOMPurify.sanitize(desc);
   return (
     <div className="w-2/3 ">
@@ -28,10 +28,16 @@ const JobDec = () => {
         <div className="flex flex-col gap-2 items-center ">
           <Link to={"/apply-job"}>
             <Button color="brightSun.4" variant="light" size="sm">
-              Apply
+              {props.edit ? "Edit" : "Apply"}
             </Button>
           </Link>
-          <IconBookmark className=" cursor-pointer text-bright-sun-400" />
+          {props.edit ? (
+            <Button color="red.5" variant="outline" size="sm">
+             Delete
+            </Button>
+          ) : (
+            <IconBookmark className=" cursor-pointer text-bright-sun-400" />
+          )}
         </div>
       </div>
       <Divider size="xs" my="xl" />
