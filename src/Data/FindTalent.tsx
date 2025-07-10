@@ -152,7 +152,7 @@ export const talents = [
   ];
   
   export const profile={
-    name: "Jarrod Wood",
+    name: "Avi Makwana",
     role: "Software Engineer",
     company: "Google",
     location: "New York, United States",
