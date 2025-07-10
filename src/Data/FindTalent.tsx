@@ -150,6 +150,7 @@ export const talents = [
         image:"avatar"
       }
   ];
+  
   export const profile={
     name: "Jarrod Wood",
     role: "Software Engineer",
