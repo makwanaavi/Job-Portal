@@ -1,16 +1,14 @@
 import React from "react";
-import TalentCard from "../FindTalent/TalentCard";
-import { talents } from "../Data/FindTalent";
+import CompanyCard from "./CompanyCard";
+import { similar } from "../Data/Company";
 
 const SimilarCompanyes = () => {
   return (
-    <div>
-        <div>
-            Similar Companyes
-        </div>
+    <div className="w-1/4 ">
+      <div>Similar Companyes</div>
       <div className="flex flex-col flex-wrap gap-5">
-        {talents.map((talent, index) => (
-          <TalentCard key={index} {...talent} />
+        {similar.map((Company, index) => (
+          <CompanyCard key={index} {...Company} />
         ))}
       </div>
     </div>

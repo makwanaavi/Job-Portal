@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const TalentCard = (props: any) => {
   return (
-    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800  duration-300 w-fit p-6 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-lg hover:scale-[1.02] transform transition-all ease-in-out">
+    <div className="bg-mine-shaft-900 hover:bg-mine-shaft-800 w-full  duration-300 w-fit p-6 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-lg hover:scale-[1.02] transform transition-all ease-in-out">
       {/* Top section */}
       <div className="flex justify-between items-start">
         <div className="flex gap-3 items-center">
