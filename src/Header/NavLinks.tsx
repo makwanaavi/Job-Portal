@@ -9,6 +9,7 @@ const NavLinks = () => {
     { name: "Find Talent", url: "find-talent" },
     { name: "Post Jobs", url: "post-job" },
     { name: "Posted Job", url: "posted-job" },
+    { name: "Job History", url: "job-history" },
   ];
   const location = useLocation();
 
@@ -18,7 +19,6 @@ const NavLinks = () => {
         <div
           key={index}
           className={`active:scale-125 transition-all ${
-    
             location.pathname === "/" + link.url
               ? "border-bright-sun-400 text-bright-sun-400"
               : "text-white border-transparent"
