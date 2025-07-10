@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const JobCard = (props: any) => {
   return (
-    <Link to={'/jobs'} className="bg-mine-shaft-900 hover:bg-mine-shaft-800 duration-300 w-full p-5 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-md hover:scale-[1.02] transform transition-all ease-in-out">
+    <Link to={'/jobs'} className="bg-mine-shaft-900  hover:bg-mine-shaft-800 duration-300 w-full p-5 flex flex-col gap-4 rounded-2xl border border-mine-shaft-700 hover:shadow-md hover:scale-[1.02] transform transition-all ease-in-out">
       {/* Top Section */}
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between">
         <div className="flex gap-3 items-center">
           <div className="p-2 bg-mine-shaft-800 rounded-lg">
             <img

@@ -44,7 +44,7 @@ const Sort = () => {
           </div>
         </Combobox.Target>
 
-        <Combobox.Dropdown >
+        <Combobox.Dropdown>
           <Combobox.Options>{options}</Combobox.Options>
         </Combobox.Dropdown>
       </Combobox>
