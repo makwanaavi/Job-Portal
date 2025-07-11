@@ -1,4 +1,4 @@
-import { ActionIcon, Divider } from "@mantine/core";
+import { ActionIcon, Divider, TagsInput, Textarea } from "@mantine/core";
 import {
   IconBriefcaseFilled,
   IconDeviceFloppy,
@@ -15,6 +15,32 @@ import fields from "../Data/Profile";
 const Profile = () => {
   const select = fields;
   const [edit, setEdit] = useState([false, false, false, false, false]);
+  const [about, setabout] = useState(
+    "As a Software Engineer at Google, I specialize in building scalable and high-performance applications. My expertise lies in integrating front-end and back-end technologies to deliver seamless user experiences. With a strong foundation in React and SpringBoot, and a focus on MongoDB for database solutions, I am passionate about leveraging the latest technologies to solve complex problems and drive innovation. My goal is to create impactful software that enhances productivity and meets user needs effectively."
+  );
+  const [skills, setskills] = useState<string[]>([
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Angular",
+    "Node.js",
+    "Python",
+    "Java",
+    "Ruby",
+    "PHP",
+    "SQL",
+    "MongoDB",
+    "PostgreSQL",
+    "Git",
+    "API Development",
+    "Testing and Debugging",
+    "Agile Methodologies",
+    "DevOps",
+    "AWS",
+    "Azure",
+    "Google Cloud",
+  ]);
 
   const handleEdit = (index: any) => {
     const newEdit = [...edit];
@@ -77,33 +103,95 @@ const Profile = () => {
         <Divider size="xs" my="xl" />
 
         <div className="px-1">
-          <div className="text-2xl font-semibold mb-3">About Me</div>
-          <div className="text-sm text-mine-shaft-300 text-justify">
-            {profile.about}
+          <div className="text-2xl font-semibold mb-3 flex justify-between ">
+            About Me
+            <ActionIcon
+              onClick={() => handleEdit(1)}
+              variant="subtle"
+              color="brightSun.4"
+              size="lg"
+            >
+              {edit[1] ? (
+                <IconDeviceFloppy className="w-4/5 h-4/5" />
+              ) : (
+                <IconPencil className="w-4/5 h-4/5" />
+              )}
+            </ActionIcon>
           </div>
-        </div>
-        <Divider size="xs" my="xl" />
-
-        <div className="px-1">
-          <div className="text-2xl font-semibold mb-3">Skills</div>
-          <div className="flex flex-wrap gap-1">
-            <div className="flex flex-wrap gap-3">
-              {profile.skills.map((skill: string, index: number) => (
-                <div
-                  className="bg-bright-sun-300/15 bg-opacity-15 rounded-3xl text-sm font-medium  text-bright-sun-400 px-3 py-2 "
-                  key={index}
-                >
-                  {skill}
-                </div>
-              ))}
+          {edit[1] ? (
+            <Textarea
+              autosize
+              minRows={3}
+              value={about}
+              onChange={(event) => setabout(event.currentTarget.value)}
+              placeholder="Enter About YourSelf"
+            />
+          ) : (
+            <div className="text-sm text-mine-shaft-300 text-justify">
+              {about}
             </div>
+          )}
+        </div>
+        <Divider size="xs" my="xl" />
+
+        <div className="px-1">
+          <div className="text-2xl font-semibold mb-3 flex justify-between">
+            Skills
+            <ActionIcon
+              onClick={() => handleEdit(2)}
+              variant="subtle"
+              color="brightSun.4"
+              size="lg"
+            >
+              {edit[2] ? (
+                <IconDeviceFloppy className="w-4/5 h-4/5" />
+              ) : (
+                <IconPencil className="w-4/5 h-4/5" />
+              )}
+            </ActionIcon>
           </div>
+
+          {edit[2] ? (
+            <TagsInput
+              placeholder="Add Skill"
+              splitChars={[",", " ", "|"]}
+              value={skills}
+              onChange={setskills}
+            />
+          ) : (
+            <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill: string, index: number) => (
+                  <div
+                    className="bg-bright-sun-300/15 bg-opacity-15 rounded-3xl text-sm font-medium  text-bright-sun-400 px-3 py-2 "
+                    key={index}
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         <Divider size="xs" my="xl" />
 
         <div className="px-1">
-          <div className="text-2xl font-semibold mb-5">Experiance</div>
+          <div className="text-2xl font-semibold mb-5 flex justify-between">
+            Experiance
+            <ActionIcon
+              onClick={() => handleEdit(3)}
+              variant="subtle"
+              color="brightSun.4"
+              size="lg"
+            >
+              {edit[3] ? (
+                <IconDeviceFloppy className="w-4/5 h-4/5" />
+              ) : (
+                <IconPencil className="w-4/5 h-4/5" />
+              )}
+            </ActionIcon>
+          </div>
           <div className="flex flex-col gap-4">
             {profile.experience.map((exp: any, index: any) => (
               <ExpCard key={index} {...exp} />
@@ -114,7 +202,21 @@ const Profile = () => {
         <Divider size="xs" my="xl" />
 
         <div className="px-1">
-          <div className="text-2xl font-semibold mb-5">Certification</div>
+          <div className="text-2xl font-semibold mb-5 flex justify-between">
+            Certification
+            <ActionIcon
+              onClick={() => handleEdit(4)}
+              variant="subtle"
+              color="brightSun.4"
+              size="lg"
+            >
+              {edit[4] ? (
+                <IconDeviceFloppy className="w-4/5 h-4/5" />
+              ) : (
+                <IconPencil className="w-4/5 h-4/5" />
+              )}
+            </ActionIcon>
+          </div>
           <div className="flex flex-col gap-4">
             {profile.certifications.map((cer: any, index: any) => (
               <CertificationCard key={index} {...cer} />
