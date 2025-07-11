@@ -6,6 +6,7 @@ import {
   TextInput,
 } from "@mantine/core";
 import {
+  IconArrowLeft,
   IconAt,
   IconLock,
   IconLogin2,
@@ -16,6 +17,17 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
+      <div className="flex gap-5">
+                <Link to={"/"} className="my-5 inline-block">
+                  <Button
+                    leftSection={<IconArrowLeft size={20} />}
+                    color="brightSun.4"
+                    variant="light"
+                  >
+                    Back
+                  </Button>
+                </Link>
+              </div>
       <div className="text-3xl font-semibold ">Create Your Account</div>
       <TextInput
         leftSection={<IconSignature size={18} stroke={1.5} />}
@@ -61,6 +73,8 @@ const SignUp = () => {
         </Link>
       </div>
     </div>
+
+
   );
 };
 
