@@ -13,6 +13,7 @@ import { useState } from "react";
 import { SelectInput } from "./SelectInput";
 import fields from "../Data/Profile";
 import ExpInput from "./ExpInput";
+import CertiInput from "./CeriInput";
 
 const Profile = () => {
   const select = fields;
@@ -50,6 +51,7 @@ const Profile = () => {
     setEdit(newEdit);
   };
   const [addExp, setAddExp] = useState(false);
+  const [addCerti, setAddCerti] = useState(false);
   return (
     <div className="w-4/5 mx-auto">
       <div className="relative">
@@ -184,7 +186,7 @@ const Profile = () => {
             Experiance
             <div className="flex gap-2">
               <ActionIcon
-                onClick={() => handleEdit(3)}
+                onClick={() => setAddExp(true)}
                 variant="subtle"
                 color="brightSun.4"
                 size="lg"
@@ -210,8 +212,7 @@ const Profile = () => {
             {profile.experience.map((exp: any, index: any) => (
               <ExpCard key={index} {...exp} edit={edit[3]} />
             ))}
-            { addExp &&  <ExpInput setEdit={setAddExp}  add />}
-           
+            {addExp && <ExpInput setEdit={setAddExp} add />}
           </div>
         </div>
 
@@ -220,23 +221,38 @@ const Profile = () => {
         <div className="px-1">
           <div className="text-2xl font-semibold mb-5 flex justify-between">
             Certification
-            <ActionIcon
-              onClick={() => handleEdit(4)}
-              variant="subtle"
-              color="brightSun.4"
-              size="lg"
-            >
-              {edit[4] ? (
-                <IconDeviceFloppy className="w-4/5 h-4/5" />
-              ) : (
-                <IconPencil className="w-4/5 h-4/5" />
-              )}
-            </ActionIcon>
+             <div className="flex gap-2">
+              <ActionIcon
+                onClick={() => setAddCerti(true)}
+                variant="subtle"
+                color="brightSun.4"
+                size="lg"
+              >
+                <IconPlus className="w-4/5 h-4/5" />
+              </ActionIcon>
+
+              <ActionIcon
+                onClick={() => handleEdit(4)}
+                variant="subtle"
+                color="brightSun.4"
+                size="lg"
+              >
+                {edit[4] ? (
+                  <IconDeviceFloppy className="w-4/5 h-4/5" />
+                ) : (
+                  <IconPencil className="w-4/5 h-4/5" />
+                )}
+              </ActionIcon>
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             {profile.certifications.map((cer: any, index: any) => (
-              <CertificationCard key={index} {...cer} />
+              <CertificationCard key={index} edit={edit[4]} {...cer} />
             ))}
+
+            {
+               addCerti && <CertiInput setEdit={setAddCerti}/>
+            }
           </div>
         </div>
       </div>

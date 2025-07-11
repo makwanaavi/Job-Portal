@@ -1,4 +1,7 @@
-const CertificationCard = (cer: any) => {
+import { ActionIcon } from "@mantine/core";
+import { IconPencil, IconTrash } from "@tabler/icons-react";
+
+const CertificationCard = (props: any) => {
   return (
     <div className="flex justify-between items-start">
       <div className="flex gap-3 items-center">
@@ -10,16 +13,20 @@ const CertificationCard = (cer: any) => {
           />
         </div>
         <div>
-          <div className="font-semibold text-mine-shaft-100">
-            {cer.name}
-          </div>
-          <div className="text-sm text-mine-shaft-400">{cer.issuer}</div>
+          <div className="font-semibold text-mine-shaft-100">{props.name}</div>
+          <div className="text-sm text-mine-shaft-400">{props.issuer}</div>
         </div>
       </div>
       <div>
-        <div className="flex flex-col items-end">
-            <div className="text-sm text-mine-shaft-200">{cer.issueDate}</div>
-            <div className="text-sm text-mine-shaft-200"> {cer.certificateId}</div>
+        <div className="flex items-center gap-2">
+          <div className="flex flex-col items-end">
+            <div className="text-sm text-mine-shaft-200">{props.issueDate}</div>
+            <div className="text-sm text-mine-shaft-200">{props.certificateId}</div>
+          </div>
+
+         { props.edit && <ActionIcon color="red.8" variant="subtle" size='lg'>
+            <IconTrash className="w-4/5 w-4/5" stroke={1.8} />
+          </ActionIcon>}
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const ExpInput = (props: any) => {
   return (
     <div className="flex gap-3 flex-col">
       <div className="text-lg font-semibold">
-        {props.add ? "Add" : "Edit" } Experience
+        {props.add ? "Add" : "Edit"} Experience
       </div>
       <div className="flex gap-10 my-4 [&>*]:w-1/2">
         <SelectInput {...select[0]} />
