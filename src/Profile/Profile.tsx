@@ -1,7 +1,5 @@
-import { ActionIcon, Button, Divider } from "@mantine/core";
+import { ActionIcon, Divider } from "@mantine/core";
 import {
-  IconBookmark,
-  IconBookmarkFilled,
   IconBriefcaseFilled,
   IconDeviceFloppy,
   IconMapPin,
@@ -11,15 +9,18 @@ import ExpCard from "./ExpCard";
 import CertificationCard from "./CertificationCard";
 import { profile } from "../Data/FindTalent";
 import { useState } from "react";
+import { SelectInput } from "./SelectInput";
+import fields from "../Data/Profile";
 
 const Profile = () => {
+  const select = fields;
   const [edit, setEdit] = useState([false, false, false, false, false]);
 
-  const handleEdit = (index:any) =>{
-    const newEdit = [...edit]; 
-    newEdit[index] =!newEdit[index] ;
-    setEdit(newEdit)
-  }
+  const handleEdit = (index: any) => {
+    const newEdit = [...edit];
+    newEdit[index] = !newEdit[index];
+    setEdit(newEdit);
+  };
   return (
     <div className="w-4/5 mx-auto">
       <div className="relative">
@@ -39,22 +40,40 @@ const Profile = () => {
           {profile.name}
 
           <ActionIcon
-          onClick={() => handleEdit(0)}
+            onClick={() => handleEdit(0)}
             variant="subtle"
             color="brightSun.4"
             size="lg"
           >
-            { edit[0]?<IconDeviceFloppy className="w-4/5 h-4/5" /> :<IconPencil className="w-4/5 h-4/5" /> }
-            
+            {edit[0] ? (
+              <IconDeviceFloppy className="w-4/5 h-4/5" />
+            ) : (
+              <IconPencil className="w-4/5 h-4/5" />
+            )}
           </ActionIcon>
         </div>
-        <div className="text-xl flex gap-2">
-          <IconBriefcaseFilled /> {profile.role} &bull; {profile.company}
-        </div>
-        <div className="text-lg flex items-center gap-2 text-mine-shaft-300">
-          <IconMapPin className="h-5 w-5" stroke={1.5} />
-          {profile.location}
-        </div>
+        {edit[0] ? (
+          <>
+            <div className="flex gap-10 my-4 [&>*]:w-1/2">
+              <SelectInput {...select[0]} />
+
+              <SelectInput {...select[1]} />
+            </div>
+
+            <SelectInput {...select[2]} />
+          </>
+        ) : (
+          <>
+            <div className="text-xl flex gap-2">
+              <IconBriefcaseFilled /> {profile.role} &bull; {profile.company}
+            </div>
+            <div className="text-lg flex items-center gap-2 text-mine-shaft-300">
+              <IconMapPin className="h-5 w-5" />
+              {profile.location}
+            </div>
+          </>
+        )}
+
         <Divider size="xs" my="xl" />
 
         <div className="px-1">
