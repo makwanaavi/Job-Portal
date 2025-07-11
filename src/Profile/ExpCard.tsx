@@ -3,7 +3,7 @@ import { useState } from "react";
 import ExpInput from "./ExpInput";
 
 const ExpCard = (props: any) => {
-  const [edit, setedit] = useState(false);
+  const [edit, setEdit] = useState(false);
   return !edit ? (
     <div className="flex flex-col gap-2">
       <div className="flex justify-between items-start">
@@ -37,7 +37,7 @@ const ExpCard = (props: any) => {
       </div>
       {props.edit && (
         <div className="flex gap-5">
-          <Button color="brightSun.4" variant="outline" onClick={() => setedit(true)}>
+          <Button color="brightSun.4" variant="outline" onClick={() => setEdit(true)}>
             Edit
           </Button>
 
@@ -48,7 +48,7 @@ const ExpCard = (props: any) => {
       )}
     </div>
   ) : (
-    <ExpInput setedit={setedit}/>
+    <ExpInput setEdit={setEdit}/>
   );
 };
 

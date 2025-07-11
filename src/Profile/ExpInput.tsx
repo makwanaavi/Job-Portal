@@ -14,7 +14,9 @@ const ExpInput = (props: any) => {
   const [checked, setChecked] = useState(false);
   return (
     <div className="flex gap-3 flex-col">
-      <div className="text-lg font-semibold">Edit Experiance</div>
+      <div className="text-lg font-semibold">
+        {props.add ? "Add" : "Edit" } Experience
+      </div>
       <div className="flex gap-10 my-4 [&>*]:w-1/2">
         <SelectInput {...select[0]} />
 
@@ -60,7 +62,7 @@ const ExpInput = (props: any) => {
         <Button
           color="green.4"
           variant="outline"
-          onClick={() => props.setedit(false)}
+          onClick={() => props.setEdit(false)}
         >
           Save
         </Button>
@@ -68,7 +70,7 @@ const ExpInput = (props: any) => {
         <Button
           color="red.8"
           variant="outline"
-          onClick={() => props.setedit(false)}
+          onClick={() => props.setEdit(false)}
         >
           Cancel
         </Button>
