@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Job-Portal/static/css/main.927dfb91.css",
+    "main.js": "/Job-Portal/static/js/main.e9e6a618.js",
+    "static/js/453.7fa805eb.chunk.js": "/Job-Portal/static/js/453.7fa805eb.chunk.js",
+    "index.html": "/Job-Portal/index.html",
+    "main.927dfb91.css.map": "/Job-Portal/static/css/main.927dfb91.css.map",
+    "main.e9e6a618.js.map": "/Job-Portal/static/js/main.e9e6a618.js.map",
+    "453.7fa805eb.chunk.js.map": "/Job-Portal/static/js/453.7fa805eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.927dfb91.css",
+    "static/js/main.e9e6a618.js"
+  ]
+}
