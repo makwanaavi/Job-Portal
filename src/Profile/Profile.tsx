@@ -194,7 +194,7 @@ const Profile = () => {
           </div>
           <div className="flex flex-col gap-4">
             {profile.experience.map((exp: any, index: any) => (
-              <ExpCard key={index} {...exp} />
+              <ExpCard key={index} {...exp} edit={edit[3]}/>
             ))}
           </div>
         </div>
