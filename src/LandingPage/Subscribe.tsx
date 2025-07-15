@@ -20,7 +20,6 @@ const Subscribe = () => {
         <Button size="xl" color="brightSun.4" variant="filled">
           Subscribe
         </Button>
-        ;
       </div>
     </div>
   );
